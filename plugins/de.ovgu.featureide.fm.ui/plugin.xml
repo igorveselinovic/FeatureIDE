@@ -267,6 +267,23 @@
 				</visibleWhen>
 			</command>
 			<separator
+					name="de.ovgu.featureide.fm.ui.separatorX"
+					visible="true">
+			</separator>
+			<command
+					commandId="de.ovgu.featureide.fm.ui.commands.ExportXPath"
+					icon="icons/export_wiz.gif"
+					id="de.ovgu.featureide.fm.ui.actions.ExportXPath"
+					label="Export model to XPath format"
+					style="push">
+				<visibleWhen
+						checkEnabled="false">
+					<reference
+							definitionId="de.ovgu.featureide.fm.ui.expressions.containsXml">
+					</reference>
+				</visibleWhen>
+			</command>
+			<separator
 					name="de.ovgu.featureide.fm.ui.separator3"
 					visible="true">
 			</separator>
@@ -470,6 +487,10 @@
 				name="Import model from SXFM (S.P.L.O.T.) format">
 		</command>
 		<command
+				id="de.ovgu.featureide.fm.ui.commands.ExportXPath"
+				name="Export model to XPath format">
+		</command>
+		<command
 				id="de.ovgu.featureide.fm.ui.commands.ExportSPLConquerer"
 				name="Export model to SPL Conquerer format">
 		</command>
@@ -563,6 +584,10 @@
 		<handler
 				class="de.ovgu.featureide.fm.ui.handlers.ImportSXFMHandler"
 				commandId="de.ovgu.featureide.fm.ui.commands.ImportSXFM">
+		</handler>
+		<handler
+				class="de.ovgu.featureide.fm.ui.handlers.ExportXPathHandler"
+				commandId="de.ovgu.featureide.fm.ui.commands.ExportXPath">		
 		</handler>
 		<handler
 				class="de.ovgu.featureide.fm.ui.handlers.ImportVelvetHandler"
